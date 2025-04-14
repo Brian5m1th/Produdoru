@@ -1,1 +1,14 @@
-spring.application.name=produdoru
+server:
+  servlet:
+    context-path: /produdoro/api
+
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: ${MONGO_DB_URI:mongodb+srv://briansm1th:briansps10012@produdoro.tq70nv6.mongodb.net/produdoro?retryWrites=true&w=majority&appName=produdoro}
+      auto-index-creation: true
+
+springdoc:
+  swagger-ui:
+    path: /public/swagger

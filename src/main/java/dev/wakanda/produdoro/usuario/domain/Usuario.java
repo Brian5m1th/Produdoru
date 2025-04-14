@@ -1,18 +1,29 @@
-package dev.wakanda.produdoro.domain;
+package dev.wakanda.produdoro.usuario.domain;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.validation.Valid;
+import javax.validation.constraints.Email;
 
 @Builder
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Document(collection = "usuario")
 public class Usuario {
+    @Id
     private String IdUsuario;
+    @Indexed
+    @Email
     private String senha;
     private ConfiguraçaoUsuario configuraçao;
-    private StatusUsuario status;
+    @Builder.Default
+    private StatusUsuario status = StatusUsuario.FOCO;
+    @Builder.Default
+    private Integer quantidadePomodorosPausaCurta = 0;
 }

@@ -1,4 +1,4 @@
-package de.wakanda.produdoro;
+package dev.wakanda.produdoro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

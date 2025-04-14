@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Document(collection = "ConfiguracaoPomodoroPadrao")
 @Getter
-public class ConfiguraçaoPomodoroPadrao {
+public class ConfiguraçaoPadrao {
 
     private static final String CODIGO_DEFAULT = "Default";
     @MongoId(targetType = FieldType.STRING)

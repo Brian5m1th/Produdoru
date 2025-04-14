@@ -1,4 +1,4 @@
-package dev.wakanda.produdoro.usuario.domain;
+package dev.wakanda.credencial.domain;
 
 import lombok.AccessLevel;
 import lombok.Builder;
